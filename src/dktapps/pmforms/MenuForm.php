@@ -66,10 +66,10 @@ class MenuForm extends BaseForm{
 		parent::__construct($title);
 		$this->content = $text;
 		$this->options = array_values($options);
-		Utils::validateCallableSignature(function(Player $player, int $selectedOption) : void{}, $onSubmit);
+		//Utils::validateCallableSignature(function(Player $player, int $selectedOption) : void{}, $onSubmit);
 		$this->onSubmit = $onSubmit;
 		if($onClose !== null){
-			Utils::validateCallableSignature(function(Player $player) : void{}, $onClose);
+			//Utils::validateCallableSignature(function(Player $player) : void{}, $onClose);
 			$this->onClose = $onClose;
 		}
 	}

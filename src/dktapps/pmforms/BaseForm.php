@@ -51,7 +51,7 @@ abstract class BaseForm implements Form{
 	 * Serializes the form to JSON for sending to clients.
 	 * @return mixed[]
 	 */
-	final public function jsonSerialize() : array{
+	final public function jsonSerialize() : mixed{
 		$ret = $this->serializeFormData();
 		$ret["type"] = $this->getType();
 		$ret["title"] = $this->getTitle();

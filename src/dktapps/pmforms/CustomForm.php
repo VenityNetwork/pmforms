@@ -73,10 +73,10 @@ class CustomForm extends BaseForm{
 			$this->elementMap[$element->getName()] = $element;
 		}
 
-		Utils::validateCallableSignature(function(Player $player, CustomFormResponse $response) : void{}, $onSubmit);
+		//Utils::validateCallableSignature(function(Player $player, CustomFormResponse $response) : void{}, $onSubmit);
 		$this->onSubmit = $onSubmit;
 		if($onClose !== null){
-			Utils::validateCallableSignature(function(Player $player) : void{}, $onClose);
+			//Utils::validateCallableSignature(function(Player $player) : void{}, $onClose);
 			$this->onClose = $onClose;
 		}
 	}
